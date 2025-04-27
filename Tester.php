@@ -1,6 +1,12 @@
 <?php 
 declare(strict_types=1);
 
-class Tester {
-  
+include 'Employee.php';
+
+class Tester extends Employee 
+{
+  abstract public string $name;
+  abstract public string $subname;
+  abstract public int $price = 10;
+  abstract public string $features = "может управлять или руководить"; // особенности работы
 }
