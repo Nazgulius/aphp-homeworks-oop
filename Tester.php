@@ -1,12 +1,26 @@
 <?php 
 declare(strict_types=1);
 
-include 'Employee.php';
-
-class Tester extends Employee 
+class Tester extends Employee implements WebinarSpeakerInterface, ApplicationCreatorInterface
 {
-  abstract public string $name;
-  abstract public string $subname;
-  abstract public int $price = 10;
-  abstract public string $features = "может управлять или руководить"; // особенности работы
+  public string $name;
+  public string $subname;
+  public int $price = 10;
+  public string $prof = "тестировщик";
+
+  public function __construct(string $name, string $subname, int $price)
+  {
+    parent::__construct($name, $subname, $price);
+    $this->features[] = "может заниматься тестировкий и проверкой приложения"; 
+  }
+
+  public function Webinar():string
+  {
+    return "тестит приложение";
+  }
+
+  public function Develop(): string
+  {
+    return "тестит приложение";
+  }
 }

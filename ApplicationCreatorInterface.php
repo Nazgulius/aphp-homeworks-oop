@@ -4,7 +4,6 @@ declare(strict_types=1);
 interface ApplicationCreatorInterface 
 {
 
-  public string $develop {
-
-  }
+  public function Develop():string; 
+  
 }
