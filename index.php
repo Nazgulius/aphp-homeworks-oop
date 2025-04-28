@@ -6,8 +6,8 @@ spl_autoload_register(function ($class_name) {
 });
 
 // создаём сотрудников
-$one = new Manager("Bob", "Smith", 40);
-$countPrice = $one->price;
+$manOne = new Manager("Bob", "Smith", 40);
+$countPrice = $manOne->price;
 
 $progOne = new Programmer("Stiv", "Way", 80);
 $countPrice +=  $progOne->price;
@@ -20,10 +20,10 @@ $countPrice += $dirOne->price;
 
 
 // вывод на экран
-echo $one->subname . " " . $one->name . ", позиция: " . $one->prof . ", зарплата: " 
-. $one->price . " попугаев, " . $one->YouFeatures() . "." . PHP_EOL; 
-echo "А ещё " . $one->Manage() . "!" . PHP_EOL;
-echo "А ещё " . $one->Webinar() . "!" . PHP_EOL;
+echo $manOne->subname . " " . $manOne->name . ", позиция: " . $manOne->prof . ", зарплата: " 
+. $manOne->price . " попугаев, " . $manOne->YouFeatures() . "." . PHP_EOL; 
+echo "А ещё " . $manOne->Manage() . "!" . PHP_EOL;
+echo "А ещё " . $manOne->Webinar() . "!" . PHP_EOL;
 echo PHP_EOL;
 
 echo $progOne->subname . " " . $progOne->name . ", позиция: " . $progOne->prof . ", зарплата: "
